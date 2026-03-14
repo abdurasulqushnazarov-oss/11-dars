@@ -162,11 +162,16 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  transform: scale(1.1);
+  transition: all 0.4s linear;
+}
+
 .container {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 24px 156px;
+  padding: 24px;
 }
 
 .site-nav {
@@ -201,11 +206,51 @@ button {
   color: #dc3845;
 }
 
+.hero-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  color: #2b2b2b;
+  margin-bottom: 16px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 48px;
+  line-height: 100%;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background: #ff4d4d;
+  color: white;
+  text-decoration: none;
+  border-radius: 40px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+}
+
 @media (max-width: 900px) {
   .navbar {
     gap: 16px;
   }
-
+}
+@media (max-width: 768px) {
   .site-links {
     display: none;
   }
