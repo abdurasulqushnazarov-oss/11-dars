@@ -169,7 +169,7 @@ button:hover {
 
 .container {
   width: 100%;
-  max-width: 1280px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 24px;
 }
@@ -184,7 +184,6 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
   button {
     background: transparent;
   }
@@ -197,6 +196,7 @@ button:hover {
 .site-links {
   display: flex;
   gap: 48px;
+  margin-right: 48px;
   a {
     color: #282525;
   }
@@ -206,14 +206,14 @@ button:hover {
   color: #dc3845;
 }
 
-.hero-wrap {
+.hero-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.hero-text {
-  max-width: 50%;
+  margin: 0 auto;
+  img {
+    max-width: 100%;
+  }
 }
 
 .hero-text h1 {
@@ -225,29 +225,30 @@ button:hover {
 }
 
 .hero-text p {
-  font-size: 16px;
-  color: #777;
+  font-size: 15px;
+  color: #5d5656;
   margin-bottom: 48px;
   line-height: 100%;
+  max-width: 380px;
 }
 
 .hero-btn {
-  display: inline-block;
-  padding: 16px 40px;
-  background: #ff4d4d;
+  padding: 20px 56px;
+  background: #dc3845;
   color: white;
-  text-decoration: none;
+  font-size: 16px;
   border-radius: 40px;
   font-weight: 500;
-  transition: 0.3s;
-}
-
-.hero-btn:hover {
 }
 
 @media (max-width: 900px) {
-  .navbar {
-    gap: 16px;
+  .darkmode {
+    margin-right: 16px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
   }
 }
 @media (max-width: 768px) {
@@ -256,5 +257,15 @@ button:hover {
   }
   .menu-bar {
     display: block;
+  }
+  .hero-container {
+    text-align: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .hero-text h1 {
+    font-size: 24px;
+    width: 100%;
   }
 }
